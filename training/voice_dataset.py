@@ -46,7 +46,7 @@ class VoiceDataset(torch.utils.data.Dataset):
         self.symbols = symbols
         self.symbol_to_id = {s: i for i, s in enumerate(symbols)}
         self.max_wav_value = 32768.0
-        self.sampling_rate = 48000
+        self.sampling_rate = 22050
         self.load_mel_from_disk = False
         self.stft = TacotronSTFT()
         random.shuffle(self.filepaths_and_text)
