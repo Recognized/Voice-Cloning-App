@@ -11,7 +11,7 @@ NUMBER_RE = re.compile(r"[0-9]+")
 ORDINALS = re.compile(r"([0-9]+[st|nd|rd|th]+)")
 CURRENCY = re.compile(r"([£|$|€]+[0-9]+)")
 WHITESPACE_RE = re.compile(r"\s+")
-ALLOWED_CHARACTERS_RE = re.compile("[^a-z ,.!?'-]+")
+ALLOWED_CHARACTERS_RE = re.compile("[^a-z ,.!?'-@]+")
 MONETARY_REPLACEMENT = {"$": " dollars", "£": " pounds", "€": " euros"}
 ABBREVIATION_REPLACEMENT = {
     "mr.": "mister",
