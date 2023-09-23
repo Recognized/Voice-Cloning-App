@@ -252,6 +252,8 @@ def checkpoint_cleanup(output_directory, iteration, checkpoint_frequency, checkp
         if last_checkpoint % checkpoint_backup_frequency != 0:
             # Last checkpoint shouldn't be kept as a backup
             try:
-                os.remove(os.path.join(output_directory, "checkpoint_{}".format(last_checkpoint)))
+                file = os.path.join(output_directory, "checkpoint_{}".format(last_checkpoint))
+                open(file, 'w').close()
+                os.remove(file)
             except OSError:
                 pass
